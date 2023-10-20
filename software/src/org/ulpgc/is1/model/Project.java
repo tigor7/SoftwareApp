@@ -9,4 +9,12 @@ public class Project {
     private String description;
     private ProjectType type;
     private List<Contract> contract;
+
+    public Project(int id, String name, String description, ProjectType type, List<Contract> contract) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.type = type;
+        this.contract = contract;
+    }
 }
