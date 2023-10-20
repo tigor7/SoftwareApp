@@ -7,10 +7,12 @@ public class Task {
     private String description;
     private Date start;
     private Date end;
+    private TaskType type;
 
-    public Task(String name, String description, Date start, Date end) {
+    public Task(String name, String description, TaskType type, Date start, Date end) {
         this.name = name;
         this.description = description;
+        this.type = type;
         this.start = start;
         this.end = end;
     }
@@ -29,6 +31,10 @@ public class Task {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public TaskType getType() {
+        return type;
     }
 
     public Date getStart() {
