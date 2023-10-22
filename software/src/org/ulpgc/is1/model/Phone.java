@@ -7,11 +7,7 @@ public class Phone {
     private String number;
 
     public Phone(String number) {
-        this.number = number;
-        if (!isValid()) {
-            this.number = "XXXX";
-        }
-
+        setNumber(number);
     }
 
     public String getNumber() {
@@ -20,6 +16,9 @@ public class Phone {
 
     public void setNumber(String number) {
         this.number = number;
+        if (!isValid()) {
+            this.number = "XXXX";
+        }
     }
 
     public Boolean isValid() {
