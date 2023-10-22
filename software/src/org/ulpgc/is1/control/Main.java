@@ -3,6 +3,7 @@ package org.ulpgc.is1.control;
 import org.ulpgc.is1.model.*;
 
 import java.util.Date;
+import java.util.List;
 
 public class Main {
     private static void init(ProjectManager manager) {
@@ -34,12 +35,19 @@ public class Main {
         System.out.println("Second employee name is " + manager.getEmployee(1).getName());
         System.out.println("Second employee surname is " + manager.getEmployee(1).getEmail());
 
-        // vii
+        // vii print first client project data
         System.out.println("First client project id is " + manager.getCustomer(0).getProject(0).getId());
         System.out.println("First client project name is " + manager.getCustomer(0).getProject(0).getName());
         System.out.println("First client project description is " + manager.getCustomer(0).getProject(0).getDescription());
 
-        // viii
+        // viii print first client project tasks data
+        List<Task> tasks =  manager.getCustomer(0).getProject(0).getTasks();
+        for (int i = 0; i < tasks.size(); i++) {
+            System.out.println("Task "+ i + " name is " + tasks.get(i).getName());
+            System.out.println("Task "+ i + " description is " + tasks.get(i).getDescription());
+            System.out.println("Task "+ i + " start date" + tasks.get(i).getStart());
+            System.out.println("Task "+ i + " end date" + tasks.get(i).getEnd());
+        }
 
         // ix remove second client
         System.out.println("The number of clients is " + manager.getCustomers().size());

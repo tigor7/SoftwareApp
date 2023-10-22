@@ -73,4 +73,8 @@ public class Project {
         employee.addTaskWithEffort(task, effort);
     }
 
+    public List<Task> getTasks() {
+        return tasks;
+    }
+
 }
