@@ -1,6 +1,7 @@
 package org.ulpgc.is1.model;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class Project {
@@ -9,13 +10,20 @@ public class Project {
     private String name;
     private String description;
     private ProjectType type;
+    private List<Task> tasks;
+    private Employee manager;
+
+    private List<Employee> developers;
     private final List<Contract> contractList;
 
-    public Project(int id, String name, String description, ProjectType type, List<Contract> contract) {
+    public Project(int id, String name, String description, ProjectType type, List<Contract> contract, Employee manager) {
         this.id = NEXT_ID++;
         this.name = name;
         this.description = description;
         this.type = type;
+        tasks = new ArrayList<Task>();
+        this.manager = manager;
+        developers = new ArrayList<Employee>();
         contractList = new ArrayList<>();
     }
 
@@ -49,5 +57,13 @@ public class Project {
 
     public List<Contract> getContractList() {
         return contractList;
+    }
+
+    public void addTask(String name, String description, TaskType type, Date start, Date end) {
+        tasks.add(new Task(name, description, type, start, end));
+    }
+
+    public void addDeveloper(Employee developer) {
+        developers.add(developer);
     }
 }
