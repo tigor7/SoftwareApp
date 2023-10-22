@@ -1,5 +1,5 @@
 package org.ulpgc.is1.model;
 
 public enum ProjectType {
-    Web development, Mobil app development, Cloud computing
+    Web_development, Mobil_app_development, Cloud_computing
 }
