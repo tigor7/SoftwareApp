@@ -23,8 +23,10 @@ public class Project {
         this.type = type;
         tasks = new ArrayList<Task>();
         this.manager = manager;
+        this.customer = customer;
+        this.customer.addProject(this);
         developers = new ArrayList<Employee>();
-        contractList = new ArrayList<>();
+        contractList = new ArrayList<Contract>();
     }
 
     public int getId() {

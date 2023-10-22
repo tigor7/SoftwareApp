@@ -35,13 +35,16 @@ public class Main {
         System.out.println("Second employee surname is " + manager.getEmployee(1).getEmail());
 
         // vii
+        System.out.println("First client project id is " + manager.getCustomer(0).getProject(0).getId());
+        System.out.println("First client project name is " + manager.getCustomer(0).getProject(0).getName());
+        System.out.println("First client project description is " + manager.getCustomer(0).getProject(0).getDescription());
 
         // viii
 
         // ix remove second client
         System.out.println("The number of clients is " + manager.getCustomers().size());
-        
         manager.removeCustomer(1);
+        System.out.println("Client removed");
 
         // x
         System.out.println("The number of clients is " + manager.getCustomers().size());
