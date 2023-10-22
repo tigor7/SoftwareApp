@@ -66,4 +66,9 @@ public class Project {
     public void addDeveloper(Employee developer) {
         developers.add(developer);
     }
+
+    public void asignTaskWithEffort(Employee employee, Task task, int effort) {
+        employee.addTaskWithEffort(task, effort);
+    }
+
 }

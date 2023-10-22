@@ -6,12 +6,12 @@ import java.util.List;
 public class Employee {
     private String name;
     private String email;
-    private List<Task> tasks;
+    private List<Effort> tasksWithEfforts;
 
     public Employee(String name, String email) {
         this.name = name;
         this.email = email;
-        this.tasks = new ArrayList<Task>();
+        this.tasksWithEfforts = new ArrayList<Effort>();
     }
 
     public String getName() {
@@ -30,7 +30,7 @@ public class Employee {
         this.email = email;
     }
 
-    public void addTask(Task task) {
-        tasks.add(task);
+    public void addTaskWithEffort(Task task, int effort) {
+        tasksWithEfforts.add(new Effort(this, task, effort));
     }
 }
