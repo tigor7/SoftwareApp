@@ -37,6 +37,10 @@ public class Task {
         return type;
     }
 
+    public void setType(TaskType type) {
+        this.type = type;
+    }
+
     public Date getStart() {
         return start;
     }
