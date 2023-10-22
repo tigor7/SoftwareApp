@@ -7,9 +7,8 @@ public class Phone {
     private String number;
 
     public Phone(String number) {
-        if(isValid()) {
-            this.number = number;
-        } else {
+        this.number = number;
+        if (!isValid()) {
             this.number = "XXXX";
         }
 
