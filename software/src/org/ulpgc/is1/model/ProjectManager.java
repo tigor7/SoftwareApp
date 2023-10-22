@@ -20,11 +20,28 @@ public class ProjectManager {
     public void addEmployee(String name, String email) {
         employees.add(new Employee(name, email));
     }
+
     public Customer getCustomer(int index) {
         return customers.get(index);
     }
 
     public Employee getEmployee(int index) {
         return employees.get(index);
+    }
+
+    public void removeCustomer(int index) {
+        customers.remove(index);
+    }
+
+    public void removeEmployee(int index) {
+        employees.remove(index);
+    }
+
+    public List<Customer> getCustomers() {
+        return customers;
+    }
+
+    public List<Employee> getEmployees() {
+        return employees;
     }
 }

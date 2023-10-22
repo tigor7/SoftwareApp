@@ -25,8 +25,25 @@ public class Main {
     public static void main(String[] args) {
         ProjectManager manager = new ProjectManager();
         init(manager);
-        System.out.print("Hello and welcome! :DD");
-        System.out.print("Hello");
+        // v print first client data
+        System.out.println("First client name is " + manager.getCustomer(0).getName());
+        System.out.println("First client surname is " + manager.getCustomer(0).getSurname());
+        System.out.println("First client phone is " + manager.getCustomer(0).getPhone());
 
+        // vi print second employee data
+        System.out.println("Second employee name is " + manager.getEmployee(1).getName());
+        System.out.println("Second employee surname is " + manager.getEmployee(1).getEmail());
+
+        // vii
+
+        // viii
+
+        // ix remove second client
+        System.out.println("The number of clients is " + manager.getCustomers().size());
+        
+        manager.removeCustomer(1);
+
+        // x
+        System.out.println("The number of clients is " + manager.getCustomers().size());
     }
 }

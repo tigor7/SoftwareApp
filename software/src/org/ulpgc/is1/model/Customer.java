@@ -27,8 +27,8 @@ public class Customer {
         this.surname = surname;
     }
 
-    public Phone getPhone() {
-        return phone;
+    public String getPhone() {
+        return phone.getNumber();
     }
 
     public void setPhone(Phone phone) {
