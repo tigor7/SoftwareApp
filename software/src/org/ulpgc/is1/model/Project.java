@@ -1,7 +1,7 @@
 package org.ulpgc.is1.model;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Project {
@@ -14,19 +14,19 @@ public class Project {
     private Employee manager;
     private Customer customer;
     private List<Employee> developers;
-    private final List<Contract> contractList;
+    private final List<Contract> contracts;
 
     public Project(String name, String description, ProjectType type, Customer customer, Employee manager) {
         this.id = NEXT_ID++;
         this.name = name;
         this.description = description;
         this.type = type;
-        tasks = new ArrayList<Task>();
         this.manager = manager;
         this.customer = customer;
         this.customer.addProject(this);
+        tasks = new ArrayList<Task>();
         developers = new ArrayList<Employee>();
-        contractList = new ArrayList<Contract>();
+        contracts = new ArrayList<Contract>();
     }
 
     public int getId() {
@@ -58,10 +58,10 @@ public class Project {
     }
 
     public List<Contract> getContractList() {
-        return contractList;
+        return contracts;
     }
 
-    public void addTask(String name, String description, TaskType type, Date start, Date end) {
+    public void addTask(String name, String description, TaskType type, LocalDateTime start, LocalDateTime end) {
         tasks.add(new Task(name, description, type, start, end));
     }
 

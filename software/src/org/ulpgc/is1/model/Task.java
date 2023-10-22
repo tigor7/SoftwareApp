@@ -1,15 +1,15 @@
 package org.ulpgc.is1.model;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public class Task {
     private String name;
     private String description;
-    private Date start;
-    private Date end;
+    private LocalDateTime start;
+    private LocalDateTime end;
     private TaskType type;
 
-    public Task(String name, String description, TaskType type, Date start, Date end) {
+    public Task(String name, String description, TaskType type, LocalDateTime start, LocalDateTime end) {
         this.name = name;
         this.description = description;
         this.type = type;
@@ -41,19 +41,19 @@ public class Task {
         this.type = type;
     }
 
-    public Date getStart() {
+    public LocalDateTime getStart() {
         return start;
     }
 
-    public void setStart(Date start) {
+    public void setStart(LocalDateTime start) {
         this.start = start;
     }
 
-    public Date getEnd() {
+    public LocalDateTime getEnd() {
         return end;
     }
 
-    public void setEnd(Date end) {
+    public void setEnd(LocalDateTime end) {
         this.end = end;
     }
 }

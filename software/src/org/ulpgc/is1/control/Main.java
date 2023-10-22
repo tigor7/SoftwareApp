@@ -2,6 +2,7 @@ package org.ulpgc.is1.control;
 
 import org.ulpgc.is1.model.*;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -20,8 +21,8 @@ public class Main {
         project.addDeveloper(manager.getEmployee(0));
 
         // iv create two task
-        project.addTask("Task1", "Some task", TaskType.Programming, new Date(), new Date());
-        project.addTask("Test1", "Test task1", TaskType.Test, new Date(), new Date());
+        project.addTask("Task1", "Some task", TaskType.Programming, LocalDateTime.now(), LocalDateTime.now());
+        project.addTask("Test1", "Test task1", TaskType.Test, LocalDateTime.now(), LocalDateTime.now());
     }
     public static void main(String[] args) {
         ProjectManager manager = new ProjectManager();
