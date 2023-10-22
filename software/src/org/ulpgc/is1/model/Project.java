@@ -12,11 +12,11 @@ public class Project {
     private ProjectType type;
     private List<Task> tasks;
     private Employee manager;
-
+    private Customer customer;
     private List<Employee> developers;
     private final List<Contract> contractList;
 
-    public Project(int id, String name, String description, ProjectType type, List<Contract> contract, Employee manager) {
+    public Project(String name, String description, ProjectType type, Customer customer, Employee manager) {
         this.id = NEXT_ID++;
         this.name = name;
         this.description = description;
